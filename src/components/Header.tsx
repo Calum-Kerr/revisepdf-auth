@@ -3,20 +3,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function Header() {
-  const t = useTranslations();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { key: 'home', href: '/' },
-    { key: 'tools', href: '#tools' },
-    { key: 'about', href: '#about' },
-    { key: 'contact', href: '#contact' }
+    { key: 'home', href: '/', label: 'Home' },
+    { key: 'tools', href: '#tools', label: 'Tools' },
+    { key: 'about', href: '#about', label: 'About' },
+    { key: 'contact', href: '#contact', label: 'Contact' }
   ];
 
   return (
@@ -36,10 +33,9 @@ export default function Header() {
               href={item.href}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              {t(`navigation.${item.key}`)}
+              {item.label}
             </Link>
           ))}
-          <LanguageSwitcher />
         </nav>
 
         {/* Mobile Navigation */}
@@ -73,12 +69,9 @@ export default function Header() {
                   className="text-lg font-medium transition-colors hover:text-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {t(`navigation.${item.key}`)}
+                  {item.label}
                 </Link>
               ))}
-              <div className="mt-4">
-                <LanguageSwitcher />
-              </div>
             </nav>
           </SheetContent>
         </Sheet>

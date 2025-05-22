@@ -1,32 +1,30 @@
 'use client';
 
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
 
 export default function Footer() {
-  const t = useTranslations();
-  
+
   return (
     <footer className="mt-auto border-t py-6 md:py-0">
       <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-          {t('footer.copyright')}
+          © 2025 RevisePDF. All rights reserved.
         </p>
         <p className="text-center text-sm text-muted-foreground md:text-left">
-          {t('app.developer')}
+          Developed by Calum from Scotland
         </p>
         <div className="flex gap-4">
           <Link
             href="#"
             className="text-sm font-medium text-muted-foreground underline-offset-4 hover:underline"
           >
-            {t('footer.privacy')}
+            Privacy Policy
           </Link>
           <Link
             href="#"
             className="text-sm font-medium text-muted-foreground underline-offset-4 hover:underline"
           >
-            {t('footer.terms')}
+            Terms of Service
           </Link>
         </div>
       </div>

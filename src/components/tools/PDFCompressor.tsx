@@ -1,14 +1,12 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { toast } from 'sonner';
 import { FileUpload } from '@/components/ui/file-upload';
 
 export default function PDFCompressor() {
-  const t = useTranslations();
   const [file, setFile] = useState<File | null>(null);
   const [isCompressing, setIsCompressing] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -39,7 +37,7 @@ export default function PDFCompressor() {
           setIsCompressing(false);
           // Create a fake compressed file URL
           setCompressedFileUrl(URL.createObjectURL(file));
-          toast.success(t('tools.compression.success'));
+          toast.success('Compression complete!');
           return 100;
         }
         return newProgress;
@@ -82,11 +80,11 @@ export default function PDFCompressor() {
               <path d="M14 17h2" />
             </svg>
             <div>
-              <p className="text-lg font-medium">{t('tools.compression.dragDrop')}</p>
-              <p className="text-sm text-muted-foreground mt-1">{t('tools.compression.or')}</p>
+              <p className="text-lg font-medium">Drag and drop your PDF here</p>
+              <p className="text-sm text-muted-foreground mt-1">or</p>
             </div>
             <Button variant="outline" size="sm">
-              {t('tools.compression.browse')}
+              Browse files
             </Button>
           </div>
         </FileUpload>
@@ -139,14 +137,14 @@ export default function PDFCompressor() {
 
           {isCompressing ? (
             <div className="space-y-4">
-              <p className="text-center font-medium">{t('tools.compression.compressing')}</p>
+              <p className="text-center font-medium">Compressing...</p>
               <Progress value={progress} className="h-2" />
             </div>
           ) : compressedFileUrl ? (
             <div className="flex flex-col items-center space-y-4">
               <Button asChild className="w-full sm:w-auto">
                 <a href={compressedFileUrl} download={`compressed-${file?.name}`}>
-                  {t('tools.compression.download')}
+                  Download Compressed PDF
                 </a>
               </Button>
               <Button variant="outline" onClick={resetCompressor}>
@@ -155,7 +153,7 @@ export default function PDFCompressor() {
             </div>
           ) : (
             <Button onClick={simulateCompression} className="w-full">
-              {t('tools.compression.upload')}
+              Upload PDF
             </Button>
           )}
         </div>
