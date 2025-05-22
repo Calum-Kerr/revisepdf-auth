@@ -1,8 +1,6 @@
 import { Inter } from 'next/font/google';
-import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { Toaster } from '@/components/ui/sonner';
-
 import '../../src/app/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -21,26 +19,17 @@ export function generateStaticParams() {
   ];
 }
 
-type Props = {
+export default function LocaleLayout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
   params: { locale: string };
-};
-
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-}: Props) {
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}/index.json`)).default;
-  } catch {
-    notFound();
-  }
-
+}) {
   return (
-    <html lang={locale}>
+    <html lang={params.locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={params.locale}>
           {children}
           <Toaster />
         </NextIntlClientProvider>
