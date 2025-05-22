@@ -21,13 +21,15 @@ export function generateStaticParams() {
   ];
 }
 
+type Props = {
+  children: React.ReactNode;
+  params: { locale: string };
+};
+
 export default async function LocaleLayout({
   children,
   params: { locale }
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
+}: Props) {
   let messages;
   try {
     messages = (await import(`../../messages/${locale}/index.json`)).default;
