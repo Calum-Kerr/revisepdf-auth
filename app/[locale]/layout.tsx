@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { Toaster } from '@/components/ui/sonner';
 
-import '../globals.css';
+import '../../src/app/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
