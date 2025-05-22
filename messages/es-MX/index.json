@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "RevisePDF",
+    "description": "Edita, comprime y administra tus archivos PDF con facilidad",
+    "developer": "Desarrollado por Calum desde Escocia"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "tools": "Herramientas",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Transforma tus archivos PDF",
+    "subtitle": "Herramientas PDF simples, rápidas y seguras para todos",
+    "cta": "Comenzar"
+  },
+  "tools": {
+    "compression": {
+      "title": "Compresión de PDF",
+      "description": "Reduce el tamaño del archivo manteniendo la calidad",
+      "upload": "Subir PDF",
+      "dragDrop": "Arrastra y suelta tu PDF aquí",
+      "or": "o",
+      "browse": "Explorar archivos",
+      "compressing": "Comprimiendo...",
+      "success": "¡Compresión completa!",
+      "download": "Descargar PDF comprimido",
+      "error": "Error al comprimir el archivo. Por favor, inténtalo de nuevo."
+    },
+    "comingSoon": {
+      "title": "Más herramientas próximamente",
+      "description": "Estamos trabajando en agregar más herramientas PDF para ayudarte a administrar tus documentos."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 RevisePDF. Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio"
+  }
+}

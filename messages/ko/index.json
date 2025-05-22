@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "RevisePDF",
+    "description": "PDF 파일을 쉽게 편집, 압축 및 관리하세요",
+    "developer": "스코틀랜드 출신 Calum이 개발"
+  },
+  "navigation": {
+    "home": "홈",
+    "tools": "도구",
+    "about": "소개",
+    "contact": "연락처"
+  },
+  "hero": {
+    "title": "PDF 파일 변환하기",
+    "subtitle": "모든 사용자를 위한 간단하고 빠르며 안전한 PDF 도구",
+    "cta": "시작하기"
+  },
+  "tools": {
+    "compression": {
+      "title": "PDF 압축",
+      "description": "품질을 유지하면서 파일 크기 줄이기",
+      "upload": "PDF 업로드",
+      "dragDrop": "PDF를 여기에 끌어다 놓으세요",
+      "or": "또는",
+      "browse": "파일 찾아보기",
+      "compressing": "압축 중...",
+      "success": "압축 완료!",
+      "download": "압축된 PDF 다운로드",
+      "error": "파일 압축 중 오류가 발생했습니다. 다시 시도해 주세요."
+    },
+    "comingSoon": {
+      "title": "곧 더 많은 도구가 제공됩니다",
+      "description": "문서 관리를 돕기 위해 더 많은 PDF 도구를 추가하고 있습니다."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 RevisePDF. 모든 권리 보유.",
+    "privacy": "개인정보 처리방침",
+    "terms": "서비스 약관"
+  }
+}

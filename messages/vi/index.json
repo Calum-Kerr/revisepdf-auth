@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "RevisePDF",
+    "description": "Chỉnh sửa, nén và quản lý tệp PDF của bạn một cách dễ dàng",
+    "developer": "Phát triển bởi Calum từ Scotland"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "tools": "Công cụ",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title": "Chuyển đổi tệp PDF của bạn",
+    "subtitle": "Công cụ PDF đơn giản, nhanh chóng và an toàn cho mọi người",
+    "cta": "Bắt đầu"
+  },
+  "tools": {
+    "compression": {
+      "title": "Nén PDF",
+      "description": "Giảm kích thước tệp trong khi vẫn duy trì chất lượng",
+      "upload": "Tải lên PDF",
+      "dragDrop": "Kéo và thả PDF của bạn vào đây",
+      "or": "hoặc",
+      "browse": "Duyệt tệp",
+      "compressing": "Đang nén...",
+      "success": "Nén hoàn tất!",
+      "download": "Tải xuống PDF đã nén",
+      "error": "Lỗi khi nén tệp. Vui lòng thử lại."
+    },
+    "comingSoon": {
+      "title": "Sắp có thêm công cụ",
+      "description": "Chúng tôi đang làm việc để thêm nhiều công cụ PDF hơn để giúp bạn quản lý tài liệu."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 RevisePDF. Tất cả các quyền được bảo lưu.",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ"
+  }
+}
