@@ -4,13 +4,14 @@ import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { cn } from '@/lib/utils';
 
-interface FileUploadProps extends React.HTMLAttributes<HTMLDivElement> {
+interface FileUploadProps {
   onDrop: (acceptedFiles: File[]) => void;
   accept?: Record<string, string[]>;
   maxFiles?: number;
   maxSize?: number;
   disabled?: boolean;
   children?: React.ReactNode;
+  className?: string;
 }
 
 export function FileUpload({
@@ -20,8 +21,7 @@ export function FileUpload({
   maxSize,
   disabled = false,
   className,
-  children,
-  ...props
+  children
 }: FileUploadProps) {
   const handleDrop = useCallback(
     (acceptedFiles: File[]) => {
@@ -49,7 +49,6 @@ export function FileUpload({
         disabled && 'opacity-50 cursor-not-allowed',
         className
       )}
-      {...props}
     >
       <input {...getInputProps()} />
       {children}

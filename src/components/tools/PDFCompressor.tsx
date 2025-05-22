@@ -24,10 +24,10 @@ export default function PDFCompressor() {
 
   const simulateCompression = () => {
     if (!file) return;
-
+    
     setIsCompressing(true);
     setProgress(0);
-
+    
     // Simulate compression progress
     const interval = setInterval(() => {
       setProgress((prevProgress) => {
@@ -54,7 +54,7 @@ export default function PDFCompressor() {
   return (
     <div className="space-y-6">
       {!file && !compressedFileUrl ? (
-        <FileUpload
+        <FileUpload 
           onDrop={onDrop}
           accept={{ 'application/pdf': ['.pdf'] }}
           maxFiles={1}
