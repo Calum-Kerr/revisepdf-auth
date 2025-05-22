@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RevisePDF</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h2>RevisePDF</h2>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Transform Your PDF Files</h1>
+    <p>Simple, fast, and secure PDF tools for everyone</p>
+
+    <!-- PDF Compression Tool -->
+    <div id="upload-area" class="upload-area">
+      <div class="upload-icon">📄</div>
+      <h3>Drag & Drop your PDF here</h3>
+      <p>or</p>
+      <button class="button">Browse Files</button>
+      <input type="file" id="file-input" accept=".pdf" style="display: none;">
+    </div>
+
+    <!-- File Info -->
+    <div id="file-info" style="display: none;">
+      <h3>Selected File</h3>
+      <div style="display: flex; align-items: center; justify-content: center; margin: 1rem 0;">
+        <div style="font-size: 2rem; margin-right: 1rem;">📄</div>
+        <div>
+          <p class="file-name" style="margin: 0; font-weight: bold;"></p>
+          <p class="file-size" style="margin: 0; color: #6c757d;"></p>
+        </div>
+      </div>
+      <button id="compress-btn" class="button">Compress PDF</button>
+    </div>
+
+    <!-- Progress -->
+    <div id="progress-container" style="display: none; width: 100%; max-width: 400px; margin: 2rem 0;">
+      <p>Compressing...</p>
+      <div style="width: 100%; background-color: #e9ecef; border-radius: 4px; overflow: hidden;">
+        <div id="progress-bar" style="height: 8px; width: 0%; background-color: #4299e1; transition: width 0.3s ease;"></div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div id="result-container" style="display: none; margin: 2rem 0;">
+      <h3>Compression Complete!</h3>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+        <a id="download-btn" class="button">Download Compressed PDF</a>
+        <button id="reset-btn" style="background: none; border: 1px solid #cbd5e0; padding: 0.75rem 1.5rem; border-radius: 0.25rem; cursor: pointer;">Compress Another PDF</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 RevisePDF. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
